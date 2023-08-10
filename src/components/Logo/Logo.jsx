@@ -6,7 +6,11 @@ import logo from '../../images/logo.svg'
 export default function Logo() {
     return (
         <div className='logo'>
-            <img src={logo} alt='logo' />
+            <img 
+                src={logo} 
+                alt='logo' 
+                className="logo-img"
+                />
             <p><strong>Magoo</strong>Books</p>
         </div>
     )
