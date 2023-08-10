@@ -1,0 +1,9 @@
+.App-header {
+    display: flex;
+    background-color: #FFF;
+    justify-content: center;
+}
+
+li {
+    list-style: none;
+}

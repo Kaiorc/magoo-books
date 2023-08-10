@@ -1,5 +1,5 @@
 import React from "react";
-import './Logo.css'
+import './index.css'
 // import logo from 'C:/src/magoo-books/src/images/logo.svg'
 import logo from '../../images/logo.svg'
 
