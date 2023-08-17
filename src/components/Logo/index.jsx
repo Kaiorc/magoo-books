@@ -1,17 +1,25 @@
 import React from "react";
-import './index.css'
-// import logo from 'C:/src/magoo-books/src/images/logo.svg'
 import logo from '../../images/logo.svg'
+import styled from "styled-components";
+
+const LogoContainer = styled.div`
+display: flex;
+font-size: 30px;
+`
+
+const LogoImg = styled.img`
+    margin-right: 10px;
+`
 
 export default function Logo() {
     return (
-        <div className='logo'>
-            <img 
+        <LogoContainer>
+            <LogoImg 
                 src={logo} 
                 alt='logo' 
                 className="logo-img"
                 />
             <p><strong>Magoo</strong>Books</p>
-        </div>
+        </LogoContainer>
     )
 }

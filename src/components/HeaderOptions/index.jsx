@@ -1,14 +1,30 @@
 import React from 'react';
-import './index.css';
+import styled from 'styled-components';
+
+const OptionsList = styled.ul`
+    display: flex;
+`
+
+const Option = styled.li`
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    padding: 0 5px;
+    cursor: pointer;
+    min-width: 120px;
+`
 
 export default function HeaderOptions() {
     const textOptions = ['CATEGORIAS', 'FAVORITOS', 'MINHA ESTANTE']
 
     return(
-        <ul className='options'>
+        <OptionsList>
             { textOptions.map ( (text) => (
-                <li className='option'><p>{text}</p></li>
+                <Option className='option'><p>{text}</p></Option>
             ) ) }
-        </ul>
+        </OptionsList>
     )
 }
