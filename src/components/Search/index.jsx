@@ -54,21 +54,23 @@ export default function Search() {
         </Result>
     )) 
 
+    const handleOnBlur = event => {
+        const enteredValue = event.target.value
+        if(enteredValue != ""){
+            const searchResult = books.filter(book => book.name.toLowerCase().includes(enteredValue.toLowerCase()))
+            setBooksSearch(searchResult)
+        } else {
+            setBooksSearch([])
+        }
+    }
+
     return(
         <SearchContainer>
             <Title>Já Sabe o que procura?</Title>
             <Subtitle>Pesquise na estante</Subtitle>
             <Input 
                 placeholder="Escreva aqui sua pesquisa"
-                onBlur={event => {
-                    const enteredValue = event.target.value
-                    if(enteredValue != ""){
-                        const searchResult = books.filter(book => book.name.toLowerCase().includes(enteredValue.toLowerCase()))
-                        setBooksSearch(searchResult)
-                    } else {
-                        setBooksSearch([])
-                    }
-                }}
+                onBlur={ handleOnBlur }
             />
             { booksShowcases }
         </SearchContainer>
