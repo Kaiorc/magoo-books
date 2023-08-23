@@ -1,11 +1,10 @@
+import React from 'react'
 import styled from 'styled-components'
 import Input from '../Input'
-import React from 'react'
-import { books } from './exampleData.js'
+import { books } from './exampleData.jsx'
 
 // Bloco de estilização dos styled components
 const SearchContainer = styled.section`
-    background-image: linear-gradient(90deg, #002F52 35%, #326589 165%);
     color: #FFF;
     text-align: center;
     padding: 85px 0;
