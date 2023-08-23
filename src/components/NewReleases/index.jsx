@@ -1,4 +1,5 @@
 import React from "react";
+import { Title } from "../Title";
 import { books } from "./exampleData";
 import styled from 'styled-components'
 
@@ -7,16 +8,6 @@ const NewReleasesContainer = styled.section`
     padding-bottom: 20px;
     display: flex;
     flex-direction: column;
-`
-
-const Title = styled.h2`
-    width: 100%;
-    padding: 30px 0;
-    background-color: #FFF;
-    color: #7c11e2;
-    font-size: 36px;
-    text-align: center;
-    margin: 0;
 `
 
 const NewBooksContainer = styled.div`
@@ -35,7 +26,12 @@ export default function NewReleases() {
 
     return(
         <NewReleasesContainer>
-            <Title>Últimos Lançamentos</Title>
+            <Title 
+                color="#7C11E2"
+                fontSize="36px"
+            >
+                Últimos Lançamentos
+            </Title>
             <NewBooksContainer>
                 { booksShowcases }
             </NewBooksContainer>

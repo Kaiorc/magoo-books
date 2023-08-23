@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Input from '../Input'
+import { Input } from '../Input'
 import { books } from './exampleData.jsx'
 
 // Bloco de estilização dos styled components
