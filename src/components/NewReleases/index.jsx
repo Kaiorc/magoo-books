@@ -1,6 +1,8 @@
 import React from "react";
 import { Title } from "../Title";
 import { books } from "./exampleData";
+import RecommendationCard from "../RecommendationCard";
+import bookImage from "../../assets/angular-book-cover.png";
 import styled from 'styled-components'
 
 const NewReleasesContainer = styled.section`
@@ -35,6 +37,12 @@ export default function NewReleases() {
             <NewBooksContainer>
                 { booksShowcases }
             </NewBooksContainer>
+            <RecommendationCard 
+                title="Talvez você se interesse por"
+                subtitle="Angular 11"
+                description="Construindo uma aplicação com a plataforma Google"
+                image={bookImage}
+            />
         </NewReleasesContainer>
     )
 }
