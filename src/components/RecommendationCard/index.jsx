@@ -50,7 +50,7 @@ export default function RecommendationCard({title, subtitle, description, image}
         <Card>
             <div>
                 <Title
-                    color="#7C11E2"
+                    color="#9c27b0"
                     fontSize="16px"
                     textAlign="left"
                 >

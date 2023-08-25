@@ -1,6 +1,6 @@
 import React from "react";
-import iconUser from '../../images/perfil.svg'
-import iconBag from '../../images/sacola.svg'
+import iconUser from '../../assets/images/perfil.svg'
+import iconBag from '../..//assets/images/sacola.svg'
 import styled from "styled-components";
 
 const Icon = styled.li`

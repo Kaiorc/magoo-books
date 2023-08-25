@@ -1,4 +1,4 @@
-import cover from '../../assets/book-cover.png'
+import cover from '../../assets/images/book-cover.png'
 
 export const books = [
     { name: "Harry Potter e a Pedra Filosofal", id: 0, src: cover },

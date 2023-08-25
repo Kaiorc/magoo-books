@@ -29,7 +29,7 @@ export default function NewReleases() {
     return(
         <NewReleasesContainer>
             <Title 
-                color="#7C11E2"
+                color="#9c27b0"
                 fontSize="36px"
             >
                 Últimos Lançamentos
