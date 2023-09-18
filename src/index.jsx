@@ -30,7 +30,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/favorites" element={<h1> Exemplo de rota dos Favoritos </h1>} />
+        <Route path="/favoritos" element={<h1> Exemplo de rota dos Favoritos </h1>} />
       </Routes>
     </BrowserRouter>
     {/* <App /> */}

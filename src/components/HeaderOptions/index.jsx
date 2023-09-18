@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const OptionsList = styled.ul`
     display: flex;
@@ -23,7 +24,7 @@ export default function HeaderOptions() {
     return(
         <OptionsList>
             { textOptions.map ( (text) => (
-                <Option className='option'><p>{text}</p></Option>
+                <Link to={`/${text.toLowerCase().replace(/\s/g, '')}`}> <Option className='option'> <p>{text}</p> </Option> </Link>
             ) ) }
         </OptionsList>
     )
