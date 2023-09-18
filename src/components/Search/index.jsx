@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Input } from '../Input'
-import { books } from './exampleData.jsx'
+import { getBooks } from '../../services/books'
 
 // Bloco de estilização dos styled components
 const SearchContainer = styled.section`
@@ -45,14 +45,23 @@ const Result = styled.div`
 export default function Search() {
     /* State que salva o array de livros pesquisados */ 
     const [booksSearch, setBooksSearch] = React.useState([])
+    const [books, setBooks] = React.useState([])
 
+    /* Hook que executa a função "getBooks()" e salva o retorno no state "books", sempre que o componente é montado */
+    React.useEffect(() => {
+        const booksFromAPI = getBooks()
+        setBooks(booksFromAPI)
+    }, [])
+
+    /* Variável que guarda mapeamento do array de livros pesquisados, retornando um componente para cada livro */
     const booksShowcases = booksSearch.map( book => (
         <Result>
             <img src={book.src}/>
             <p>{book.name}</p>
         </Result>
     )) 
-
+    
+    /* Função que é executada quando o input perde o Blur (foco) */
     const handleOnBlur = event => {
         const enteredValue = event.target.value
         if(enteredValue != ""){
