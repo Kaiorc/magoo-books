@@ -9,6 +9,7 @@ const booksAPI = axios.create({ baseURL: "http://localhost:8000/livros" });
 export async function getBooks() {
     const response = await booksAPI.get('/')
 
+    // console.log(response.data)
     /* Por padrão o Axios retorna os dados que queremos via ".data" */
     return response.data
 }

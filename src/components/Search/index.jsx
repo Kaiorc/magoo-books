@@ -50,20 +50,26 @@ export default function Search() {
     /* Hook que executa a função "getBooks()" e salva o retorno no state "books", sempre que o componente é montado */
     React.useEffect(() => {
         fetchBooks()
+        // console.log(books)
     }, [])
+    console.log("booksSearch", booksSearch);
 
     async function fetchBooks() {
         const booksFromAPI = await getBooks()
+        // console.log("Dentro do Fetch")
+        // console.log(booksFromAPI)
         setBooks(booksFromAPI)
     }
 
     /* Variável que guarda mapeamento do array de livros pesquisados, retornando um componente para cada livro */
-    const booksShowcases = booksSearch.map( book => (
-        <Result>
-            <img src={book.src}/>
-            <p>{book.name}</p>
-        </Result>
-    )) 
+    const booksShowcases = booksSearch.map( book => {
+        return (
+            <Result>
+                <img src={book.src}/>
+                <p>{book.name}</p>
+            </Result>
+        )
+    }) 
     
     /* Função que é executada quando o input perde o Blur (foco) */
     const handleOnBlur = event => {
