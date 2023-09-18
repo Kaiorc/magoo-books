@@ -6,8 +6,8 @@ import axios from "axios";
 const booksAPI = axios.create({ baseURL: "http://localhost:8000/livros" });
 
 /* Retornando os dados da API. */
-export function getBooks() {
-    const response = booksAPI.get('/')
+export async function getBooks() {
+    const response = await booksAPI.get('/')
 
     /* Por padrão o Axios retorna os dados que queremos via ".data" */
     return response.data

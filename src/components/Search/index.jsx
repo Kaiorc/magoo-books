@@ -49,9 +49,13 @@ export default function Search() {
 
     /* Hook que executa a função "getBooks()" e salva o retorno no state "books", sempre que o componente é montado */
     React.useEffect(() => {
-        const booksFromAPI = getBooks()
-        setBooks(booksFromAPI)
+        fetchBooks()
     }, [])
+
+    async function fetchBooks() {
+        const booksFromAPI = await getBooks()
+        setBooks(booksFromAPI)
+    }
 
     /* Variável que guarda mapeamento do array de livros pesquisados, retornando um componente para cada livro */
     const booksShowcases = booksSearch.map( book => (
