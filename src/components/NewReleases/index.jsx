@@ -2,7 +2,7 @@ import React from "react";
 import { Title } from "../Title";
 import { books } from "./exampleData";
 import RecommendationCard from "../RecommendationCard";
-import bookImage from "../../assets/angular-book-cover.png";
+import bookImage from "../../assets/images/angular-book-cover.png";
 import styled from 'styled-components'
 
 const NewReleasesContainer = styled.section`

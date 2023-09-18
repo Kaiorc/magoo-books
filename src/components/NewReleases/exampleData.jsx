@@ -1,4 +1,4 @@
-import cover from '../../assets/book-cover.png'
+import cover from '../../assets/images/book-cover.png'
 
 export const books = [
     { name: "O Sol e a Estrela: Uma aventura de Nico Di Angelo ", id: 0, src: cover },
