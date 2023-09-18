@@ -1,8 +1,6 @@
-import Header from './components/Header'
 import Search from './components/Search'
 import NewReleases from './components/NewReleases'
 import styled from 'styled-components'
-
 
 const AppContainer = styled.div`
   width: 100vw;
@@ -13,7 +11,6 @@ const AppContainer = styled.div`
 export default function App() {
   return (
     <AppContainer>
-      <Header />
       <Search />
       <NewReleases />
     </AppContainer>
