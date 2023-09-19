@@ -13,3 +13,11 @@ export async function getFavoriteBooks() {
     /* Por padrão o Axios retorna os dados que queremos via ".data" */
     return response.data
 }
+
+export async function postFavoriteBook(id) {
+    const response = await favoriteBooksAPI.post(`/${id}`)
+}
+
+export async function deleteFavoriteBook(id) {
+    const response = await favoriteBooksAPI.delete(`/${id}`)
+}
