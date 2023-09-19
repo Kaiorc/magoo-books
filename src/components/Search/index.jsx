@@ -47,13 +47,17 @@ export default function Search() {
     const [booksSearch, setBooksSearch] = React.useState([])
     const [books, setBooks] = React.useState([])
 
-    /* Hook que executa a função "getBooks()" e salva o retorno no state "books", sempre que o componente é montado */
+    /* Hook que executa a função "getBooks()" e salva o retorno no state "books", sempre que o componente é montado. */
+    /* Funções que realizam chamadas para APIs são assíncronas, porém, não podemos declará-las dentro do useEffect, */
+    /* pois será lançado um erro de formatação */
     React.useEffect(() => {
         fetchBooks()
-        // console.log(books)
     }, [])
-    console.log("booksSearch", booksSearch);
+    
+    // console.log("booksSearch", booksSearch);
 
+    /* Funções que realizam chamadas para APIs são assíncronas, porém, não podemos declará-las dentro do useEffect, */
+    /* pois será lançado um erro de formatação */
     async function fetchBooks() {
         const booksFromAPI = await getBooks()
         // console.log("Dentro do Fetch")
