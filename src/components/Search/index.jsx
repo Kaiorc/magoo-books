@@ -2,6 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import { Input } from '../Input'
 import { getBooks } from '../../services/books'
+import bookImage from '../../assets/images/book-cover.png'
+import { postFavoriteBook } from '../../services/favorites'
 
 // Bloco de estilização dos styled components
 const SearchContainer = styled.section`
@@ -65,11 +67,16 @@ export default function Search() {
         setBooks(booksFromAPI)
     }
 
+    async function insertFavoriteBook(id) {
+        await postFavoriteBook(id)
+        alert("Livro adicionado aos favoritos!")
+    }
+
     /* Variável que guarda mapeamento do array de livros pesquisados, retornando um componente para cada livro */
     const booksShowcases = booksSearch.map( book => {
         return (
-            <Result>
-                <img src={book.src}/>
+            <Result onClick={() => insertFavoriteBook(book.id)}>
+                <img src={bookImage}/>
                 <p>{book.name}</p>
             </Result>
         )

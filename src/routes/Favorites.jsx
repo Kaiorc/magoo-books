@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { getFavoriteBooks } from '../services/favorites'
+import { getFavoriteBooks, deleteFavoriteBook } from '../services/favorites'
 import bookImage from '../assets/images/book-cover.png'
 
 const AppContainer = styled.div`
@@ -50,17 +50,22 @@ export default function Favorites() {
   /* pois será lançado um erro de formatação */
   React.useEffect(() => {
     fetchFavoriteBooks()
-  },[])
+  },[favoriteBooks])
 
   async function fetchFavoriteBooks() {
     const favoriteBooksFromAPI = await getFavoriteBooks()
     setFavoriteBooks(favoriteBooksFromAPI)
   }
 
+  async function removeFavoriteBook(id) {
+    await deleteFavoriteBook(id)
+    alert("Livro removido dos favoritos com sucesso!")
+  }
+
   /* Variável que guarda mapeamento do array de livros favoritos, retornando um componente para cada livro */
   const favoriteBooksShowcases = favoriteBooks.map( book => {
     return (
-        <Result>
+        <Result onClick={() => removeFavoriteBook(book.id)}>
             <img src={bookImage}/>
             <p>{book.name}</p>
         </Result>
