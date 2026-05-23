@@ -4,6 +4,12 @@ Magoo Books é uma aplicação web feita com React e Vite para explorar livros, 
 
 O projeto consome uma API REST local e possui integração com um back-end feito em Node.js e Express, responsável por expor os livros e os favoritos utilizados pela interface.
 
+## Exibição
+
+```
+![Página principal](magoo-books.png)
+```
+
 ## Funcionalidades
 
 - Busca de livros por nome.
@@ -52,6 +58,25 @@ magoo-books/
 		`-- favorites.js  # Funções para listar, salvar e remover favoritos.
 ```
 
+## Back-end
+
+A interface foi criada para consumir um back-end em Node.js com Express, que fornece as rotas de livros e favoritos usadas pelo front-end.
+
+**Repositório do back-end:** [magoo-books-server](https://github.com/Kaiorc/magoo-books-server)
+
+## API utilizada pelo front-end
+
+- Livros: `GET http://localhost:8000/livros/`
+- Favoritos: `GET http://localhost:8000/favorites/`
+- Adicionar favorito: `POST http://localhost:8000/favorites/:id`
+- Remover favorito: `DELETE http://localhost:8000/favorites/:id`
+
+## Observações
+
+- O projeto foi pensado para rodar com o back-end já iniciado localmente.
+- A busca é feita no front-end a partir dos dados retornados pela API.
+- Os favoritos são persistidos pelo back-end.
+
 ## Instalação
 
 1. Instale as dependências.
@@ -74,22 +99,3 @@ npm run dev
 - `npm run build`: gera a versão de produção.
 - `npm run preview`: visualiza a build localmente.
 - `npm run lint`: executa a análise de código.
-
-## Back-end
-
-A interface foi criada para consumir um back-end em Node.js com Express, que fornece as rotas de livros e favoritos usadas pelo front-end.
-
-Repositório do back-end: [magoo-books-server](https://github.com/Kaiorc/magoo-books-server)
-
-## API utilizada pelo front-end
-
-- Livros: `GET http://localhost:8000/livros/`
-- Favoritos: `GET http://localhost:8000/favorites/`
-- Adicionar favorito: `POST http://localhost:8000/favorites/:id`
-- Remover favorito: `DELETE http://localhost:8000/favorites/:id`
-
-## Observações
-
-- O projeto foi pensado para rodar com o back-end já iniciado localmente.
-- A busca é feita no front-end a partir dos dados retornados pela API.
-- Os favoritos são persistidos pelo back-end.
