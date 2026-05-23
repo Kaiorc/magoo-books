@@ -4,20 +4,6 @@ Magoo Books é uma aplicação web feita com React e Vite para explorar livros, 
 
 O projeto consome uma API REST local e possui integração com um back-end feito em Node.js e Express, responsável por expor os livros e os favoritos utilizados pela interface.
 
-## Exibição
-
-```
-![Página principal](magoo-books.png)
-```
-
-## Funcionalidades
-
-- Busca de livros por nome.
-- Visualização de livros em destaque e lançamentos.
-- Adição de livros aos favoritos.
-- Listagem e remoção de livros favoritos.
-- Navegação entre as rotas principal e favoritos.
-
 ## Tecnologias utilizadas
 
 - **React** (v18.2.0): Biblioteca para construir a interface de usuário com componentes reutilizáveis.
@@ -27,6 +13,25 @@ O projeto consome uma API REST local e possui integração com um back-end feito
 - **Axios** (v1.5.0): Cliente HTTP usado para consumir a API do back-end.
 - **Node.js** (v18+): Ambiente de execução JavaScript usado no back-end.
 - **Express** (v4.x): Framework web para Node.js que expõe as rotas no back-end.
+
+## Back-end
+
+A interface foi criada para consumir um back-end em Node.js com Express, que fornece as rotas de livros e favoritos usadas pelo front-end.
+
+**Repositório do back-end:** [magoo-books-server](https://github.com/Kaiorc/magoo-books-server)
+
+## Exibição
+
+![Página principal](magoo-books.png)
+
+## Funcionalidades
+
+- Busca de livros por nome.
+- Visualização de livros em destaque e lançamentos.
+- Adição de livros aos favoritos.
+- Listagem e remoção de livros favoritos.
+- Navegação entre as rotas principal e favoritos.
+
 
 ## Estrutura
 
@@ -57,12 +62,6 @@ magoo-books/
 		|-- books.js      # Funções para buscar livros.
 		`-- favorites.js  # Funções para listar, salvar e remover favoritos.
 ```
-
-## Back-end
-
-A interface foi criada para consumir um back-end em Node.js com Express, que fornece as rotas de livros e favoritos usadas pelo front-end.
-
-**Repositório do back-end:** [magoo-books-server](https://github.com/Kaiorc/magoo-books-server)
 
 ## API utilizada pelo front-end
 
@@ -99,3 +98,9 @@ npm run dev
 - `npm run build`: gera a versão de produção.
 - `npm run preview`: visualiza a build localmente.
 - `npm run lint`: executa a análise de código.
+
+## Arquitetura
+
+Diagrama:
+
+![Diagrama da arquitetura](magoo-books-diagram-flowchart.png)

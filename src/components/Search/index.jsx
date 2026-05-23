@@ -95,7 +95,7 @@ export default function Search() {
 
     return(
         <SearchContainer>
-            <Title>Já Sabe o que procura?</Title>
+            <Title>Já sabe o que procura?</Title>
             <Subtitle>Pesquise na estante</Subtitle>
             <Input 
                 placeholder="Escreva aqui sua pesquisa"
